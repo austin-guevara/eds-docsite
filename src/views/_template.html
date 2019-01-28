@@ -23,6 +23,11 @@
         border-radius: 0.5em;
       }
 
+			.app-footer {
+        color: #080707;
+				text-align: left;
+      }
+
       code {
         font-size: 1.25em;
       }
@@ -96,19 +101,19 @@
       }
 
 			.standard-padding {
-        padding: 3em;
+        padding: 0 3em 3em;
       }
 
 			.main-page {
 				padding: 0;
-				text-align: center;
-				color: white;
 			}
 
 			.site-title {
 				height: 75vh;
 				background-image: url('../../assets/Hero_Image.jpg');
 				background-size: cover;
+				color: white;
+				text-align: center;
 			}
 
 			.email_icon {
@@ -166,6 +171,87 @@
           overflow: scroll;
         max-width: {{ shared.templates[0].mobileDisplayWidth }};
       }
+
+			/**
+			* Paper Plane
+			*/
+			/*Paper Plane: Container*/
+			.plane-container {
+				width: 200px;
+				margin: 0px auto;
+				z-index: 3;
+			}
+			/*Paper Plane: Image*/
+			.plane {
+				width: 100%;
+				height: 60px;
+			}
+
+			/*Paper Plane: Animation*/
+			.plane-container {
+				-webkit-animation: paper-plane-scoping 2s alternate infinite;
+				-moz-animation: paper-plane-scoping 2s alternate infinite;
+				animation: paper-plane-scoping 2s alternate infinite;
+
+				-webkit-animation-timing-function: linear;
+				-moz-animation-timing-function: linear;
+				animation-timing-function: linear;
+			}
+
+			@-webkit-keyframes paper-plane-scoping {
+				0% {
+					-webkit-transform: translateY(0px);
+					-moz-transform: translateY(0px);
+					transform: translateY(0px);
+				}
+				100% {
+					-webkit-transform: translateY(15px);
+					-moz-transform: translateY(15px);
+					transform: translateY(15px);
+				}
+			}
+
+			.plane {
+				-webkit-animation-timing-function: ease-in-out;
+				-moz-animation-timing-function: ease-in-out;
+				animation-timing-function: ease-in-out;
+
+				-webkit-animation: paper-plane-soaring 4s forwards infinite;
+				-moz-animation: paper-plane-soaring 4s forwards infinite;
+				animation: paper-plane-soaring 4s forwards infinite;
+			}
+			@-webkit-keyframes paper-plane-soaring {
+				0% {
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+				40% {
+					-webkit-transform: rotate(3deg);
+					-moz-transform: rotate(3deg);
+					transform: rotate(3deg);
+				}
+				50% {
+					-webkit-transform: rotate(3deg);
+					-moz-transform: rotate(3deg);
+					transform: rotate(3deg);
+				}
+				60% {
+					-webkit-transform: rotate(-1.5deg);
+					-moz-transform: rotate(-1.5deg);
+					transform: rotate(-1.5deg);
+				}
+				70% {
+					-webkit-transform: rotate(-1.5deg);
+					-moz-transform: rotate(-1.5deg);
+					transform: rotate(-1.5deg);
+				}
+				100% {
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
     </style>
   </head>
 

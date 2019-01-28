@@ -58,19 +58,18 @@
       <pre><code class="language-markup {{ component.id }}_language-markup">{{ component.htmlCode }}</code></pre>
     </div>
   </div>
-  <div class="slds-col slds-size_1-of-1">
-    {% include "_page-footer.html" %}
-  </div>
+	<script>
+		var html_string = '{{ shared.templates[0].htmlTemplateStart | safe }}' + '{{ component.htmlCode | safe }}' + '{{ shared.templates[0].htmlTemplateEnd | safe }}';
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.write(html_string);
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.close();
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.write(html_string);
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.close();
+	</script>
 </div>
-<script>
-	var html_string = '{{ shared.templates[0].htmlTemplateStart | safe }}' + '{{ component.htmlCode | safe }}' + '{{ shared.templates[0].htmlTemplateEnd | safe }}';
-	document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.open('text/htmlreplace');
-	document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.write(html_string);
-	document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.close();
-	document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.open('text/htmlreplace');
-	document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.write(html_string);
-	document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.close();
-</script>
 {% endfor %}
-
+<div class="standard-padding slds-col slds-size_1-of-1">
+	{% include "_page-footer.html" %}
+</div>
 {% endblock %}

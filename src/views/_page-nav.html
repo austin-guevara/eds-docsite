@@ -32,13 +32,13 @@
   <div class="slds-nav-vertical__section">
     <h2 id="folder-header" class="slds-nav-vertical__title slds-text-title_caps">Styles</h2>
     <ul>
-      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+      <li class="slds-nav-vertical__item" id="color-palettes"><a href="/styles/#color-palettes" class="slds-nav-vertical__action"
           aria-describedby="folder-header">Color Palettes</a></li>
-      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+      <li class="slds-nav-vertical__item" id="typography"><a href="/styles/#typography" class="slds-nav-vertical__action"
           aria-describedby="folder-header">Typography</a></li>
-      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+      <li class="slds-nav-vertical__item" id="grid-spacing"><a href="/styles/#grid-spacing" class="slds-nav-vertical__action"
           aria-describedby="folder-header">Grid and Spacing</a></li>
-      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+      <li class="slds-nav-vertical__item" id="iconography"><a href="/styles/#iconography" class="slds-nav-vertical__action"
           aria-describedby="folder-header">Iconography</a></li>
     </ul>
   </div>
@@ -51,7 +51,7 @@
 
     <div class="slds-nav-vertical__overflow">
       <button class="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
-        aria-controls="search-results" aria-expanded="false">
+        aria-controls="search-results" aria-expanded="true">
         <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
         </svg>
@@ -59,7 +59,7 @@
           <span class="slds-assistive-text">Elements</span>
         </span>
       </button>
-      <div id="search-results" class="slds-hide">
+      <div id="search-results">
         <ul class="nav-elements">
           {% for component in shared.components %}
           {% if component.type == "element" %}
@@ -74,7 +74,7 @@
 
     <div class="slds-nav-vertical__overflow">
       <button class="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
-        aria-controls="search-results" aria-expanded="false">
+        aria-controls="search-results" aria-expanded="true">
         <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
         </svg>
@@ -82,11 +82,11 @@
           <span class="slds-assistive-text">Modules</span>
         </span>
       </button>
-      <div id="search-results" class="slds-hide">
+      <div id="search-results">
         <ul class="nav-modules">
           {% for component in shared.components %}
           {% if component.type == "module" %}
-          <li class="slds-nav-vertical__item">
+          <li class="slds-nav-vertical__item" id="{{ component.id }}">
 						<a href="/components/#{{ component.id }}" class="slds-nav-vertical__action" aria-describedby="folder-header">{{ component.name }}</a>
 					</li>
           {% endif %}

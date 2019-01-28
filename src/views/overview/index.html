@@ -9,14 +9,34 @@
 {% block content %}
 <div class="slds-grid slds-wrap standard-page main-page" id="getting-started">
   <div class="slds-col slds-size_1-of-1 site-title">
-		<img class="email_icon" src="../../assets/Icon_White@2x.png" width="205" height="auto" />
+		<div class="plane-container">
+			<img class="email_icon plane" src="../../assets/Icon_White@2x.png" width="205" height="auto"/>
+		</div>
     <h1 class="slds-text-heading_large brand_title">{{ shared.brandInfo[0].brandName }}</h1>
 		<h2 class="slds-text-heading_large site_title">EMAIL DESIGN SYSTEM</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium">Create beautiful, branded, effective emails with efficiency</p>
+    <p class="slds-text-body_regular slds-m-vertical_medium site_tagline" >Create beautiful, branded, effective emails with efficiency</p>
 		<button class="slds-button slds-button_brand start_button">GET STARTED</button>
   </div>
-  <div class="standard-padding slds-col slds-size_1-of-1">
-    {% include "_page-footer.html" %}
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="usage-guidelines">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Usage Guidelines</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">How to use this documentation site</p>
   </div>
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="content-builder">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Content Builder</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Tips for building emails with your design system in Content Builder</p>
+  </div>
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="whats-new">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">What’s New?</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Release updates for your email design system</p>
+  </div>
+</div>
+<div class="standard-padding slds-col slds-size_1-of-1">
+	{% include "_page-footer.html" %}
 </div>
 {% endblock %}

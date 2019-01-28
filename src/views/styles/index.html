@@ -1,0 +1,37 @@
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+<div class="slds-grid slds-wrap standard-page standard-page" id="color-palettes">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Color Palettes</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">How to use this documentation site</p>
+  </div>
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="typography">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Typography</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Tips for building emails with your design system in Content Builder</p>
+  </div>
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="grid-spacing">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Grid and Spacing</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Release updates for your email design system</p>
+  </div>
+</div>
+<div class="slds-grid slds-wrap standard-page standard-page" id="Iconography">
+  <div class="slds-col slds-size_1-of-1 page-title">
+    <h1 class="slds-text-heading_large">Iconography</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Release updates for your email design system</p>
+  </div>
+</div>
+<div class="standard-padding slds-col slds-size_1-of-1">
+	{% include "_page-footer.html" %}
+</div>
+{% endblock %}
