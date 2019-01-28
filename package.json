@@ -27,6 +27,7 @@
   "dependencies": {
     "@salesforce-ux/design-system": "^2.*",
     "browser-sync": "^2.18.8",
+    "css-loader": "^2.1.0",
     "del": "^2.2.2",
     "express": "^4.15.2",
     "gulp": "^3.9.1",
@@ -51,7 +52,6 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "css-loader": "^1.0.1",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.0",
     "eslint-plugin-import": "^2.2.0",
