@@ -1,8 +1,66 @@
-// DO NOT DELETE THIS FILE!
-// This data is shared across all templates:
+// If you’re not comfortable with editing JSON directly,
+// edit this file with https://jsoneditoronline.org/
+// For HTML, use https://kangax.github.io/html-minifier/
+// to minify (uncheck all, select “whitespace” and enter
+// " in the quote character field )
 {
-  // To access this data in a view, you'd write:
-  // {{ shared.somedata }}
-  "somedata": "somevalue",
-  "builtWith": "Salesforce Lightning Design System Starter Kit"
+  "brandInfo": [
+    {
+      "brandName": "Green Mountain Energy",
+      "brandShort": "GME",
+      "logoSize": "200px"
+    }
+  ],
+  "templates": [
+    {
+      "name": "Basic Template",
+      "htmlTemplateStart": "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\"><head><title></title><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0\"><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"x-apple-disable-message-reformatting\"><!--[if (gte mso 9)|(IE)]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><!-- Include lines 10–18 when using web fonts. --><!-- Outlook-safe font override to prevent Times New Roman --><!--[if mso]><style> * { font-family: sans-serif !important; } </style><![endif]--><!-- Display web fonts for all non-Outlook clients --><!--[if !mso]><!--><link href=\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700\" rel=\"stylesheet\"><!--<![endif]--><style type=\"text/css\">#outlook a{padding:0}a,body,table,td{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0!important}table,td{mso-table-lspace:0;mso-table-rspace:0}img{border:0;line-height:100%;outline:0;text-decoration:none;-ms-interpolation-mode:bicubic}table{border-collapse:collapse!important}body{height:100%!important;margin:0!important;padding:0!important;width:100%!important}a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important;font-size:inherit!important;font-family:inherit!important;font-weight:inherit!important;line-height:inherit!important}@-ms-viewport{width:device-width}</style><style type=\"text/css\">html{background-color:#efefef}body{font-family:\"IBM Plex Sans\",Arial,Helvetica,sans-serif}h1,h2,h3,h4,h5,p{color:#000001;margin:0;mso-line-height-rule:exactly}h1{font-size:32px;font-weight:700;line-height:38px}h3{font-size:22px;font-weight:700;line-height:26px}a,li,p{font-size:18px;line-height:22px;padding-top:10px}a{font-weight:700;color:#215ca0}img{display:block}li,ol,ul{Margin:0;text-align:left}ol,ul{Margin:0 0 0 25px;padding:0}th{font-weight:inherit}@media only screen and (min-device-width:320px) and (max-device-width:374px){u~div .eml-container{min-width:320px!important}}@media only screen and (min-device-width:375px) and (max-device-width:413px){u~div .eml-container{min-width:375px!important}}@media only screen and (min-device-width:414px){u~div .eml-container{min-width:414px!important}}.logo{padding:30px 160px}.bg-img{background-color:#333;background-image:url(http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/1149d3f6-54ef-4b93-a4e9-f5594925e113.jpg);background-size:100%;background-size:cover;background-position:center;background-repeat:no-repeat}.bg-img_btn{padding-top:120px}.bg-img_content,.bg-img_content *{color:#fff}.btn-primary{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background-color:#215ca0;color:#fff;font-weight:700;text-decoration:none;-webkit-transition:background-color .1s ease-in-out;-moz-transition:background-color .1s ease-in-out;-o-transition:background-color .1s ease-in-out;transition:background-color .1s ease-in-out}.btn-primary:hover{background-color:#032e61}.btn-primary a{border:1px solid #215ca0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;color:#fff!important;display:block;padding:10px 25px;text-decoration:none;-webkit-transition:background-color .1s ease-in-out;-moz-transition:background-color .1s ease-in-out;-o-transition:background-color .1s ease-in-out;transition:background-color .1s ease-in-out}.btn-primary a:hover{border:1px solid #032e61}.pad-20{padding:20px}.pad-30{padding:30px}.pad-50{padding:50px}.spacer{visibility:hidden}.dt-hide{font-size:0;max-height:0;overflow:hidden;display:none}@media only screen and (max-device-width:640px),screen and (max-width:640px){.logo{padding:30px 0}.bg-color-swap{background-color:#dbedf8!important}.bg-img-swap{background-image:url(http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/c9915936-6c81-4410-b84a-5d67da93cc5c.jpg)}.mb-col-stack{display:block!important;width:100%!important;max-width:100%!important}.mb-show{display:block!important;margin:0!important;padding:0!important;overflow:visible!important;width:auto!important;max-height:inherit!important}.mb-hide{display:none!important}.mb-align-center{text-align:center!important;margin:0 auto!important}.mb-align-left{text-align:left!important}.mb-align-right{text-align:right!important}.mb-width-50pc{width:50%!important}.mb-width-100pc{width:100%!important}.mb-img-scale{width:100%!important;height:auto!important}.mb-pad-l0-r0{padding-left:0!important;padding-right:0!important}.mb-pad-t0-b0{padding-top:0!important;padding-bottom:0!important}.mb-pad-l20-r20{padding-left:20px!important;padding-right:20px!important}.mb-pad-t20-b20{padding-top:20px!important;padding-bottom:20px!important}}</style><!--[if mso | IE]><style>li{text-indent: -1em; /* Normalise space between bullets and text */}</style><![endif]--></head><body><!--%%[/* Preheader */]%%--><div style=\"display:none;max-height:0;overflow:hidden\">This is a preheader and it should be filled with \"&zwnj; \" until it reaches 185 characters. Note &zwnj;  counts as only two characters when rendered. &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; </div><!--%%[/* /Preheader */]%%--><div style=\"font-size:0;line-height:0\"><custom name=\"opencounter\" type=\"tracking\"></div><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"><tr><td bgcolor=\"#efefef\"><div align=\"center\" class=\"eml-container\"><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"640\" class=\"mb-width-100pc\">",
+      "htmlTemplateEnd": "</table></div></td></tr></table></body></html>",
+      "bodyIdentifier": "String Replace HTML Goes Here"
+    }
+  ],
+  "components": [
+    {
+      "type": "element",
+      "name": "H1 Block",
+      "id": "h1-block",
+      "description": "Use the H1 block for primary headlines and as titles for primary articles.",
+      "htmlCode": "<h1>This is an h1 primary headline</h1>"
+    },
+    {
+      "type": "element",
+      "name": "H2 Block",
+      "id": "h2-block",
+      "description": "Use the H2 block for secondary headlines, as subtitles below primary headlines, and as titles for secondary articles.",
+      "htmlCode": "<h2>This is an h2 secondary headline</h2>"
+    },
+    {
+      "type": "element",
+      "name": "H3 Block",
+      "id": "h3-block",
+      "description": "Use the H3 block for tertiary headlines and as subtitles for all types of articles.",
+      "htmlCode": "<h3>This is an h3 tertiary headline</h3>"
+    },
+    {
+      "type": "element",
+      "name": "Button (Primary)",
+      "id": "button-primary",
+      "description": "This is the primary style of button. Use it for your primary calls-to-action.",
+      "htmlCode": "<!--%%[/* Button: Fluid-width to Full-width */]%%--><tr><td align=\"center\" valign=\"top\"><table role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"mb-width-100pc\"><tr><td align=\"center\" bgcolor=\"#215ca0\" class=\"btn-primary\"><a href=\"http://www.marketingcloud.com\" alias=\"Marketing Cloud Button 4\" target=\"_blank\" class=\"btn-primary_link\">Button: Fluid to Full-width</a></td></tr></table></td></tr><!--%%[/* /Button: Fluid-width to Full-width */]%%-->"
+    },
+    {
+      "type": "module",
+      "name": "Primary Article",
+      "id": "primary-article",
+      "description": "Primary article, used to present primary information <b>titles</b>. This includes a full-width image, H1 headline, teaser copy and CTA button.",
+      "htmlCode": "<!--%%[/* Demo Article: Image:Scale, Alignment: Center-aligned to Left-aligned, Button: Fluid-width to Full-width */]%%--><!--%%[/* Image:Scale */]%%--><tr><td width=\"320\" align=\"center\" valign=\"top\"><img alt=\"\" src=\"https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Retina-Sized%2C%20Scaling%20Image&w=1280&h=400\" width=\"640\" height=\"200\" border=\"0\" class=\"mb-img-scale\"></td></tr><!--%%[/* /Image:Scale */]%%--><tr><td width=\"640\" align=\"center\" valign=\"top\" class=\"pad-20\" bgcolor=\"#FFFFFF\"><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"><!--%%[/* Alignment: Center-aligned to Left-aligned */]%%--><tr><td align=\"center\" valign=\"top\" class=\"align-left\"><h3>Alignment: Center-aligned to Left-aligned.</h3><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p></td></tr><!--%%[/* /Alignment: Center-aligned to Left-aligned */]%%--><!--%%[/* Spacer */]%%--><tr><td height=\"20\" width=\"100%\" align=\"center\" valign=\"top\" bgcolor=\"#FFFFFF\" class=\"spacer\"> </td></tr><!--%%[/* /Spacer */]%%--><!--%%[/* Button: Fluid-width to Full-width */]%%--><tr><td align=\"center\" valign=\"top\"><table role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"mb-width-100pc\"><tr><td align=\"center\" bgcolor=\"#215ca0\" class=\"btn-primary\"><a href=\"http://www.marketingcloud.com\" alias=\"Marketing Cloud Button 4\" target=\"_blank\" class=\"btn-primary_link\">Button: Fluid to Full-width</a></td></tr></table></td></tr><!--%%[/* /Button: Fluid-width to Full-width */]%%--></table></td></tr><!--%%[/* /Alignment: Center-aligned to Left-aligned */]%%-->",
+      "images": [
+        {
+          "name": "Image 1",
+          "width": "800",
+          "height": "200"
+        }
+      ]
+    }
+  ]
 }

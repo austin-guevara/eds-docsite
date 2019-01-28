@@ -1,0 +1,22 @@
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+<div class="slds-grid slds-wrap standard-page main-page" id="getting-started">
+  <div class="slds-col slds-size_1-of-1 site-title">
+		<img class="email_icon" src="../../assets/Icon_White@2x.png" width="205" height="auto" />
+    <h1 class="slds-text-heading_large brand_title">{{ shared.brandInfo[0].brandName }}</h1>
+		<h2 class="slds-text-heading_large site_title">EMAIL DESIGN SYSTEM</h1>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Create beautiful, branded, effective emails with efficiency</p>
+		<button class="slds-button slds-button_brand start_button">GET STARTED</button>
+  </div>
+  <div class="standard-padding slds-col slds-size_1-of-1">
+    {% include "_page-footer.html" %}
+  </div>
+</div>
+{% endblock %}

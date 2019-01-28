@@ -1,0 +1,98 @@
+<!--
+  Vertical Navigation
+  https://www.lightningdesignsystem.com/components/vertical-navigation/#site-main-content
+-->
+
+<nav class="slds-nav-vertical slds-nav-vertical_shade" aria-label="Sub page">
+  <div class="slds-form-element slds-p-horizontal_large" style="padding-top: 1.5em; padding-bottom: 1.5em; max-width: 100%;">
+    <img src='../assets/Sidebar_Logo.png' width="{{ shared.brandInfo[0].logoSize }}" height="auto" alt="{{ shared.brandInfo[0].brandName }}" />
+  </div>
+  <div class="slds-form-element slds-p-horizontal_large">
+    <label class="slds-form-element__label slds-assistive-text" for="input-id-01">Filter navigation items</label>
+    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+      <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+      </svg>
+      <input type="search" id="input-id-01" placeholder="Quick Find" class="slds-input" value="" />
+    </div>
+  </div>
+  <div class="slds-nav-vertical__section">
+    <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Overview</h2>
+    <ul>
+      <li class="slds-nav-vertical__item slds-is-active" id="getting-started"><a href="/overview/#getting-started" class="slds-nav-vertical__action"
+					aria-describedby="entity-header" aria-current="page">Getting Started</a></li>
+      <li class="slds-nav-vertical__item" id="usage-guidelines"><a href="/overview/#usage-guidelines" class="slds-nav-vertical__action"
+          aria-describedby="entity-header">Usage Guidelines</a></li>
+      <li class="slds-nav-vertical__item" id="content-builder"><a href="/overview/#content-builder" class="slds-nav-vertical__action"
+          aria-describedby="entity-header">Content Builder</a></li>
+      <li class="slds-nav-vertical__item" id="whats-new"><a href="/overview/#whats-new" class="slds-nav-vertical__action"
+          aria-describedby="entity-header">What’s New?</a></li>
+    </ul>
+  </div>
+  <div class="slds-nav-vertical__section">
+    <h2 id="folder-header" class="slds-nav-vertical__title slds-text-title_caps">Styles</h2>
+    <ul>
+      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+          aria-describedby="folder-header">Color Palettes</a></li>
+      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+          aria-describedby="folder-header">Typography</a></li>
+      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+          aria-describedby="folder-header">Grid and Spacing</a></li>
+      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+          aria-describedby="folder-header">Iconography</a></li>
+    </ul>
+  </div>
+  <div class="slds-nav-vertical__section">
+    <h2 id="folder-header" class="slds-nav-vertical__title slds-text-title_caps">Component Library</h2>
+    <ul>
+      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+          aria-describedby="folder-header">Templates</a></li>
+    </ul>
+
+    <div class="slds-nav-vertical__overflow">
+      <button class="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
+        aria-controls="search-results" aria-expanded="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+        </svg>
+        <span class="slds-nav-vertical__action-text">Elements
+          <span class="slds-assistive-text">Elements</span>
+        </span>
+      </button>
+      <div id="search-results" class="slds-hide">
+        <ul class="nav-elements">
+          {% for component in shared.components %}
+          {% if component.type == "element" %}
+          <li class="slds-nav-vertical__item" id="{{ component.id }}">
+						<a href="/components/#{{ component.id }}" class="slds-nav-vertical__action" aria-describedby="folder-header">{{ component.name }}</a>
+					</li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="slds-nav-vertical__overflow">
+      <button class="slds-button slds-button_reset slds-nav-vertical__action slds-nav-vertical__action_overflow"
+        aria-controls="search-results" aria-expanded="false">
+        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright" />
+        </svg>
+        <span class="slds-nav-vertical__action-text">Modules
+          <span class="slds-assistive-text">Modules</span>
+        </span>
+      </button>
+      <div id="search-results" class="slds-hide">
+        <ul class="nav-modules">
+          {% for component in shared.components %}
+          {% if component.type == "module" %}
+          <li class="slds-nav-vertical__item">
+						<a href="/components/#{{ component.id }}" class="slds-nav-vertical__action" aria-describedby="folder-header">{{ component.name }}</a>
+					</li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

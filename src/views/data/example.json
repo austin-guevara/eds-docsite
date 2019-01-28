@@ -1,6 +1,3 @@
-// This data gets injected into the example.html view
-// and is accessible using double brackets:
-// e.g. {{ recordTitle }}
 {
   "recordTitle": "Record Title",
   "accounts": [

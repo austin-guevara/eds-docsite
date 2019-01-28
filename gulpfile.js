@@ -16,6 +16,9 @@ const runSequence = require('run-sequence')
 const browserSync = require('browser-sync')
 const JSON5 = require('json5')
 const gulpLoadPlugins = require('gulp-load-plugins')
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
+const webpackConfig = require('./webpack.config.js')
 
 const $ = gulpLoadPlugins()
 
@@ -69,7 +72,8 @@ gulp.task('scripts', () =>
   gulp
     .src([
       'src/scripts/**/*.js'
-    ], { base: 'src' })
+        ], { base: 'src' })
+    .pipe(webpackStream(webpackConfig), webpack)
     .pipe(gulp.dest('dist/'))
 )
 
