@@ -34,12 +34,53 @@
 
 	{% endfor %}
 </div>
-<div class="slds-grid slds-wrap standard-page slds-hide" id="typography">
+<div class="slds-grid slds-wrap slds-gutters standard-page slds-hide" id="typography">
+	<style>
+		{{ shared.styles.fontImportURL }}
+		.useBrandFont {
+			font-family: {{ shared.styles.fontName }}
+		}
+	</style>
   <div class="slds-col slds-size_1-of-1 page-title">
     <h1 class="slds-text-heading_large">Typography</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium">Tips for building emails with your design system in
-      Content Builder</p>
+    <p class="slds-text-body_regular slds-m-vertical_medium">{{ shared.styles.typographyDescription }}</p>
   </div>
+	<div class="slds-col slds-size_1-of-4" style="margin-top:2em; margin-bottom:1em;">
+		<h2 class="slds-text-heading_medium">Glyph</h2>
+		<span class="useBrandFont" style="font-size:200px;line-height:0.9em;">M<br>m</span>
+	</div>
+	<div class="slds-col slds-size_3-of-4" style="margin-top:2em; margin-bottom:1em;">
+		<h2 class="slds-text-heading_medium">Character Set</h2>
+		<div class="useBrandFont" style="font-size:2.5em;">
+			ABCČĆDĐEFGHIJKL&#8203;MNOPQRSŠTUVWXYZŽ&#8203;
+			abcčćdđefghijkl&#8203;mnopqrsštuvwxyzžАБВГҐДЂ&#8203;
+			ЕЁЄЖЗЅИІЇЙЈКЛЉМН&#8203;ЊОПРСТЋУЎФХЦЧЏШЩ&#8203;
+			ЪЫЬЭЮЯабвгґдђеёє&#8203;жзѕиіїйјклљмнњопрстћуў&#8203;
+			фхцчџшщъыьэюяĂÂÊ&#8203;ÔƠƯăâêôơư1234567890&#8203;
+			‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*
+		</div>
+	</div>
+	<div class="slds-col slds-size_1-of-4" style="margin-top:2em; margin-bottom:1em;">
+		<h2 class="slds-text-heading_medium">Styles</h2>
+		<div class="useBrandFont">
+			{% for fontStyle in shared.styles.fontStyles %}
+			<div style="font-size:3.5em;padding-bottom:0.125em; {{ fontStyle.styleCSS }}">{{ fontStyle.styleName }}</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="slds-col slds-size_3-of-4" style="margin-top:2em; margin-bottom:1em;">
+		<h2 class="slds-text-heading_medium">Hierarchy</h2>
+		<div class="useBrandFont">
+			{% for hierarchy in shared.styles.fontHierarchy %}
+			<div style="font-size:3.5em;padding-bottom:0.125em; {{ hierarchy.styleCSS }}">{{ hierarchy.levelCopy }}</div>
+			{% endfor %}
+		</div>
+
+	</div>
+	<div class="slds-col slds-size_1-of-1" style="margin-top:2em; margin-bottom:1em;">
+		<h2 class="slds-text-heading_medium">Font Stack</h2>
+		<div style="margin-top:1em;font-size:2em;"><strong>{{ shared.styles.fontStack }}</strong></div>
+	</div>
 </div>
 <div class="slds-grid slds-wrap standard-page slds-hide" id="grid-spacing">
   <div class="slds-col slds-size_1-of-1 page-title">
