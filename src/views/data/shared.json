@@ -4,13 +4,95 @@
 // to minify (uncheck all, select “whitespace” and enter
 // " in the quote character field )
 {
-  "brandInfo": [
+  "brandInfo": {
+    "brandName": "Salesforce Marketing Cloud",
+    "brandShort": "Salesforce",
+    "logoSize": "100px"
+  },
+  "releaseUpdates": [
     {
-      "brandName": "Green Mountain Energy",
-      "brandShort": "GME",
-      "logoSize": "200px"
+      "releaseDate": "January 31, 2019",
+      "releaseNumber": "1.0.1",
+      "updatesBulleted": [
+        "Update 1",
+        "Update 2",
+        "Update 3"
+      ]
+    },
+    {
+      "releaseDate": "January 15, 2019",
+      "releaseNumber": "1.0.0",
+      "updatesBulleted": [
+        "Update 1",
+        "Update 2",
+        "Update 3"
+      ]
+    },
+    {
+      "releaseDate": "January 1, 2019",
+      "releaseNumber": "0.1.0",
+      "updatesBulleted": [
+        "Update 1",
+        "Update 2",
+        "Update 3"
+      ]
     }
   ],
+  "styles": {
+    "colorDescription": "How to use colors for this brand goes here",
+    "colors": [
+      {
+        "groupName": "Primary Colors",
+        "colors": [
+          {
+            "colorHex": "EE773B",
+            "colorName": "Pizazz",
+            "id": "color1"
+          },
+          {
+            "colorHex": "214A84",
+            "colorName": "Midnight Blue",
+            "id": "color2"
+          },
+          {
+            "colorHex": "3BB377",
+            "colorName": "Medium Green",
+            "id": "color3"
+          },
+          {
+            "colorHex": "1F7E5B",
+            "colorName": "Deep Sea",
+            "id": "color4"
+          }
+        ]
+      },
+      {
+        "groupName": "Secondary Colors",
+        "colors": [
+          {
+            "colorHex": "EE773B",
+            "colorName": "Pizazz",
+            "id": "color5"
+          },
+          {
+            "colorHex": "214A84",
+            "colorName": "Midnight Blue",
+            "id": "color6"
+          },
+          {
+            "colorHex": "3BB377",
+            "colorName": "Medium Green",
+            "id": "color7"
+          },
+          {
+            "colorHex": "1F7E5B",
+            "colorName": "Deep Sea",
+            "id": "color8"
+          }
+        ]
+      }
+    ]
+  },
   "templates": [
     {
       "name": "Basic Template",

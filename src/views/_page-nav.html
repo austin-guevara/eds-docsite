@@ -4,10 +4,10 @@
 -->
 
 <nav class="slds-nav-vertical slds-nav-vertical_shade" aria-label="Sub page">
-  <div class="slds-form-element slds-p-horizontal_large" style="padding-top: 1.5em; padding-bottom: 1.5em; max-width: 100%;">
-    <img src='../assets/Sidebar_Logo.png' width="{{ shared.brandInfo[0].logoSize }}" height="auto" alt="{{ shared.brandInfo[0].brandName }}" />
+  <div class="slds-form-element slds-p-horizontal_large" style="padding-top: 2em; padding-bottom: 1em; max-width: 100%; text-align:center;">
+    <img src='../assets/Sidebar_Logo.png' width="{{ shared.brandInfo.logoSize }}" height="auto" alt="{{ shared.brandInfo[0].brandName }}" />
   </div>
-  <div class="slds-form-element slds-p-horizontal_large">
+  <!-- <div class="slds-form-element slds-p-horizontal_large">
     <label class="slds-form-element__label slds-assistive-text" for="input-id-01">Filter navigation items</label>
     <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
       <svg class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default" aria-hidden="true">
@@ -15,7 +15,7 @@
       </svg>
       <input type="search" id="input-id-01" placeholder="Quick Find" class="slds-input" value="" />
     </div>
-  </div>
+  </div> -->
   <div class="slds-nav-vertical__section">
     <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Overview</h2>
     <ul>
@@ -45,7 +45,7 @@
   <div class="slds-nav-vertical__section">
     <h2 id="folder-header" class="slds-nav-vertical__title slds-text-title_caps">Component Library</h2>
     <ul>
-      <li class="slds-nav-vertical__item"><a href="javascript:void(0);" class="slds-nav-vertical__action"
+      <li class="slds-nav-vertical__item" id="templates"><a href="/components/#templates" class="slds-nav-vertical__action"
           aria-describedby="folder-header">Templates</a></li>
     </ul>
 

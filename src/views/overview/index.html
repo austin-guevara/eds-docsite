@@ -7,36 +7,181 @@
   Page content (gets injected into the template)
 -->
 {% block content %}
-<div class="slds-grid slds-wrap standard-page main-page" id="getting-started">
+<div class="slds-grid slds-wrap standard-page main-page slds-hide" id="getting-started">
   <div class="slds-col slds-size_1-of-1 site-title">
-		<div class="plane-container">
-			<img class="email_icon plane" src="../../assets/Icon_White@2x.png" width="205" height="auto"/>
-		</div>
-    <h1 class="slds-text-heading_large brand_title">{{ shared.brandInfo[0].brandName }}</h1>
-		<h2 class="slds-text-heading_large site_title">EMAIL DESIGN SYSTEM</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium site_tagline" >Create beautiful, branded, effective emails with efficiency</p>
-		<button class="slds-button slds-button_brand start_button">GET STARTED</button>
+    <div class="plane-container">
+      <img class="email_icon plane" src="../../assets/Icon_White@2x.png" width="205" height="auto" />
+    </div>
+    <h1 class="slds-text-heading_large brand_title">{{ shared.brandInfo.brandName }}</h1>
+    <h2 class="slds-text-heading_large site_title">EMAIL DESIGN SYSTEM</h1>
+      <p class="slds-text-body_regular slds-m-vertical_medium site_tagline">Create beautiful, branded, effective emails
+        with efficiency</p>
+      <button onclick="location.href = '/components/#{{ shared.components[0].id }}';" class="slds-button slds-button_brand start_button">JUMP
+        TO COMPONENTS</button>
   </div>
 </div>
-<div class="slds-grid slds-wrap standard-page standard-page" id="usage-guidelines">
+<div class="slds-grid slds-wrap standard-page slds-hide" id="getting-started" style="padding-bottom: 0;">
+  <ol class="slds-setup-assistant">
+    <li class="slds-setup-assistant__item">
+      <article class="slds-setup-assistant__step">
+        <div class="slds-setup-assistant__step-summary">
+          <div class="slds-media">
+            <div class="slds-setup-assistant__step-summary-content">
+              <span class="slds-icon_container slds-icon-standard-brand" title="Description of icon when needed">
+                <svg class="slds-icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#brand"></use>
+                </svg>
+                <span class="slds-assistive-text">Description of icon when needed</span>
+              </span>
+            </div>
+            <div class="slds-setup-assistant__step-summary-content slds-media__body">
+              <h3 class="slds-setup-assistant__step-summary-title slds-text-heading_small">Download the Latest Creative
+                Package</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+            <div class="slds-media__figure slds-media__figure_reverse">
+              <button class="slds-button slds-button_outline-brand">Download Sketch File</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </li>
+    <li class="slds-setup-assistant__item">
+      <article class="slds-setup-assistant__step">
+        <div class="slds-setup-assistant__step-summary">
+          <div class="slds-media">
+            <div class="slds-setup-assistant__step-summary-content">
+              <span class="slds-icon_container slds-icon-standard-loop" title="Description of icon when needed">
+                <svg class="slds-icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#loop"></use>
+                </svg>
+                <span class="slds-assistive-text">Description of icon when needed</span>
+              </span>
+            </div>
+            <div class="slds-setup-assistant__step-summary-content slds-media__body">
+              <h3 class="slds-setup-assistant__step-summary-title slds-text-heading_small">What’s New?</h3>
+              <p>
+                <span style="color:#5e5e5e;"><strong>Latest Release:</strong> Version {{ shared.releaseUpdates[0].releaseNumber }}</span><br>
+                Additional details about this release.
+              </p>
+            </div>
+            <div class="slds-media__figure slds-media__figure_reverse">
+              <button onclick="location.href = '/overview/#whats-new';" class="slds-button slds-button_outline-brand">See
+                All Updates</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </li>
+  </ol>
+</div>
+<div class="slds-grid slds-wrap standard-page slds-hide" id="usage-guidelines">
   <div class="slds-col slds-size_1-of-1 page-title">
     <h1 class="slds-text-heading_large">Usage Guidelines</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium">How to use this documentation site</p>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Use this site as the source of truth for your Email Design
+      System.</p>
+    <h2 class="slds-text-heading_medium" style="margin-top:2em;">Styles</h2>
+    <p class="slds-text-body_regular slds-m-vertical_medium">These are the visual rules that guide your design system.
+      It includes the brand colors used throughout your components, the properties used for spacing, and other
+      foundational pieces of the system.</p>
   </div>
 </div>
-<div class="slds-grid slds-wrap standard-page standard-page" id="content-builder">
+<div class="slds-grid slds-wrap standard-page slds-hide" id="content-builder">
   <div class="slds-col slds-size_1-of-1 page-title">
     <h1 class="slds-text-heading_large">Content Builder</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium">Tips for building emails with your design system in Content Builder</p>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Tips for building emails with your design system in
+      Content Builder</p>
+  </div>
+  <div class="slds-col slds-size_1-of-2 page-title">
+    <h2 class="slds-text-heading_medium" style="margin-top:2em;">Using Your Design System in Content Builder</h2>
+    <video></video>
+  </div>
+  <div class="slds-col slds-size_1-of-2 page-title">
+    <h2 class="slds-text-heading_medium" style="margin-top:2em;">More Content Builder Enablement</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL5znGRJ6gwxmyI-13StLXmWfCQLFT1qus" frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="margin-top:1em;min-height:450px;"
+      allowfullscreen></iframe>
   </div>
 </div>
-<div class="slds-grid slds-wrap standard-page standard-page" id="whats-new">
-  <div class="slds-col slds-size_1-of-1 page-title">
+<div class="slds-grid slds-wrap standard-page slds-hide" id="whats-new">
+  <div class="slds-col slds-size_1-of-1 page-title" style="margin-bottom:0;">
     <h1 class="slds-text-heading_large">What’s New?</h1>
-    <p class="slds-text-body_regular slds-m-vertical_medium">Release updates for your email design system</p>
+    <p class="slds-text-body_regular slds-m-vertical_medium">Keep track of what’s new and what’s changed in your email design system</p>
+  </div>
+  <div class="slds-col slds-size_1-of-1 page-title">
+		
+		<h2 class="slds-text-heading_medium" style="margin-top:2em;">Latest Version</h2>
+    <article class="slds-card" style="margin-top:1em;">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-thanks" title="thanks">
+              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#thanks"></use>
+              </svg>
+              <span class="slds-assistive-text">thanks</span>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="slds-card__header-title slds-card__header-link">
+							<span>Latest Release: Version {{ shared.releaseUpdates[0].releaseNumber }}</span>
+            </h2>
+          </div>
+					<div class="slds-no-flex">
+						<span style="color:#5e5e5e;"><strong>Release Date:</strong> {{ shared.releaseUpdates[0].releaseDate }}</span>
+					</div>
+        </header>
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+				<ul class="slds-has-dividers_top-space">
+					{% for updateBullet in shared.releaseUpdates[0].updatesBulleted %}
+					<li class="slds-item">{{ updateBullet }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+    </article>
+		<h2 class="slds-text-heading_medium" style="margin-top:2em;">Older Versions</h2>
+		{% set skipItems = 1 %}
+		{% for release in shared.releaseUpdates %}
+			{% if skipItems == 1 %}
+				{% set skipItems = 0 %}	
+			{% else %}
+				<article class="slds-card" style="margin-top:1em;">
+					<div class="slds-card__header slds-grid">
+						<header class="slds-media slds-media_center slds-has-flexi-truncate">
+							<div class="slds-media__figure">
+								<span class="slds-icon_container slds-icon-standard-drafts" title="drafts">
+									<svg class="slds-icon slds-icon_small" aria-hidden="true">
+										<use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#drafts"></use>
+									</svg>
+									<span class="slds-assistive-text">drafts</span>
+								</span>
+							</div>
+							<div class="slds-media__body">
+								<h2 class="slds-card__header-title slds-card__header-link">
+									<span>Release: Version {{ release.releaseNumber }}</span>
+								</h2>
+							</div>
+							<div class="slds-no-flex">
+								<span style="color:#5e5e5e;"><strong>Release Date:</strong> {{ release.releaseDate }}</span>
+							</div>
+						</header>
+					</div>
+					<div class="slds-card__body slds-card__body_inner">
+						<ul class="slds-has-dividers_top-space">
+							{% for updateBullet in release.updatesBulleted %}
+							<li class="slds-item">{{ updateBullet }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</article>
+			{% endif %}
+		{% endfor %}
   </div>
 </div>
 <div class="standard-padding slds-col slds-size_1-of-1">
-	{% include "_page-footer.html" %}
+  {% include "_page-footer.html" %}
 </div>
 {% endblock %}
