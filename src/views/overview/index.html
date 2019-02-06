@@ -37,12 +37,10 @@
             <div class="slds-setup-assistant__step-summary-content slds-media__body">
               <h3 class="slds-setup-assistant__step-summary-title slds-text-heading_small">Download the Latest Creative
                 Package</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</p>
+              <p>{{ shared.brandInfo.creativeFileDescription }}</p>
             </div>
             <div class="slds-media__figure slds-media__figure_reverse">
-              <button class="slds-button slds-button_outline-brand">Download Sketch File</button>
+							<button target="_blank" onclick="window.open('{{ shared.brandInfo.creativeFileURL }}','_blank');" class="slds-button slds-button_outline-brand">Download Sketch File</button>
             </div>
           </div>
         </div>
@@ -64,7 +62,11 @@
               <h3 class="slds-setup-assistant__step-summary-title slds-text-heading_small">What’s New?</h3>
               <p>
                 <span style="color:#5e5e5e;"><strong>Latest Release:</strong> Version {{ shared.releaseUpdates[0].releaseNumber }}</span><br>
-                Additional details about this release.
+								<ul class="slds-list_dotted">
+									{% for updateBullet in shared.releaseUpdates[0].updatesBulleted %}
+									<li class="slds-item">{{ updateBullet }}</li>
+									{% endfor %}
+								</ul>
               </p>
             </div>
             <div class="slds-media__figure slds-media__figure_reverse">
