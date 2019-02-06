@@ -1,11 +1,5 @@
 # Assets
 
-Directory dedicated to your images, icons, and fonts.
+This directory is dedicated to your images.
 
-## Loading an asset
-
-Like in classic HTML, assets are available in documents like this:
-
-```html
-<img src="/assets/my-image.jpg" alt="A beautiful image" />
-```
+Replace Hero_Image.jpg with a new one of the same name and dimensions. Replace the Sidebar_Logo.png with your logo at approximately the same size (~75px–200px wide recommended, max 280px).

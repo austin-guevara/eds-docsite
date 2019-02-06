@@ -8,15 +8,103 @@
 -->
 {% block content %}
 
-<div class="slds-grid slds-wrap standard-page slds-hide" id="templates">
+<div class="slds-grid slds-wrap standard-page slds-hide slds-gutters" id="templates">
   <div class="slds-col slds-size_1-of-1 page-title">
     <h1 class="slds-text-heading_large">Templates</h1>
     <p class="slds-text-body_regular slds-m-vertical_medium">Templates are the starting point for new emails.</p>
   </div>
+	{% for template in shared.templates %}
+	{% if template.type == "shell" %}
 	<div class="slds-col slds-size_1-of-1 page-title">
-    <h2 class="slds-text-heading_medium">Template 1</h2>
-		<p class="slds-text-body_regular slds-m-vertical_medium">Description of this template.</p>
+    <h2 class="slds-text-heading_medium">{{ template.name }}</h2>
+		<p class="slds-text-body_regular slds-m-vertical_medium">{{ template.description }}</p>
 	</div>
+  <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12">
+    <h2 class="slds-text-heading_medium">Desktop Preview</h2>
+    <div class="preview-wrapper">
+      <div class="preview-inner_desktop">
+        <iframe src="javascript:void(0);" frameborder="0" scrolling="no" class="iFramePreview" id="{{ template.id }}_iFramePreview_D"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-show_large">
+    <h2 class="slds-text-heading_medium">Mobile Preview</h2>
+    <div class="preview-wrapper">
+      <div class="preview-inner_mobile">
+        <iframe src="javascript:void(0);" frameborder="0" scrolling="no" class="iFramePreview" id="{{ template.id }}_iFramePreview_M"></iframe>
+      </div>
+    </div>
+  </div>
+	<script>
+		var html_string = '{{ template.htmlTemplateStart | safe }}' + '{{ template.htmlHeaderComponentDefault | safe }}' + '<div style="margin:1em;padding:5em;border:2px dashed #bbbbbb;text-align:center;">Content Goes Here</div>' + '{{ template.htmlFooterComponentDefault | safe }}' + '{{ template.htmlTemplateEnd | safe }}';
+		document.getElementById('{{ template.id }}_iFramePreview_D').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ template.id }}_iFramePreview_D').contentWindow.document.write(html_string);
+		document.getElementById('{{ template.id }}_iFramePreview_D').contentWindow.document.close();
+		document.getElementById('{{ template.id }}_iFramePreview_M').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ template.id }}_iFramePreview_M').contentWindow.document.write(html_string);
+		document.getElementById('{{ template.id }}_iFramePreview_M').contentWindow.document.close();
+	</script>
+	{% endif %}
+	{% endfor %}
+	{% for component in shared.templates %}
+	{% if component.type == "module" %}
+	<div class="slds-col slds-size_1-of-1 page-title">
+		<div class="slds-text-heading_small" style="text-transform:uppercase;font-weight:700;margin-top:2em;">{{ component.name }}</div>
+    <p class="slds-text-body_regular slds-m-vertical_medium">{{ component.description | safe }}</p>
+  </div>
+  <div class="slds-col slds-size_1-of-1 slds-large-size_8-of-12" style="padding-right:1em;">
+    <h2 class="slds-text-heading_medium">Desktop Preview</h2>
+    <div class="preview-wrapper">
+      <div class="preview-inner_desktop">
+        <iframe src="javascript:void(0);" frameborder="0" scrolling="no" class="iFramePreview" id="{{ component.id }}_iFramePreview_D"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12 slds-show_large">
+    <h2 class="slds-text-heading_medium">Mobile Preview</h2>
+    <div class="preview-wrapper">
+      <div class="preview-inner_mobile">
+        <iframe src="javascript:void(0);" frameborder="0" scrolling="no" class="iFramePreview" id="{{ component.id }}_iFramePreview_M"></iframe>
+      </div>
+    </div>
+  </div>
+	{% if component.images %}
+  <div class="slds-col slds-size_1-of-1 slds-large-size_4-of-12">
+    <p class="slds-text-body_regular">
+      <strong>{{ component.images[0].name }}</strong><br>
+      Standard Resolution:<br>
+      <span class="slds-text-font_monospace">width: {{ component.images[0].width }}px</span>&nbsp;&nbsp;<span
+        class="slds-text-font_monospace">height {{ component.images[0].height }}px</span><br>
+      Retina-Optimized:<br>
+      <span class="slds-text-font_monospace">width: {{ component.images[0].width * 2 }}px</span>&nbsp;&nbsp;<span
+        class="slds-text-font_monospace">height {{ component.images[0].height * 2 }}px</span><br>
+    </p>
+  </div>
+	{% endif %}
+  <div class="slds-col slds-size_1-of-1 section-gap">
+    <div class="slds-text-heading_medium">Component HTML</div>
+    <div class="small-gap site-code_content">
+      <div class="site-code_copy" data-clipboard-action="copy" data-clipboard-target=".{{ component.id }}_language-markup">
+        <button class="slds-button slds-button_icon-container" title="Copy to Clipboard">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#copy_to_clipboard"></use>
+          </svg><span aria-live="polite" class="slds-assistive-text">Copy to Clipboard</span></button>
+        <pre aria-hidden="true" class="slds-assistive-text">{{ component.htmlCode }}</pre>
+      </div>
+      <pre><code class="language-markup {{ component.id }}_language-markup">{{ component.htmlCode }}</code></pre>
+    </div>
+  </div>
+	<script>
+		var html_string = '{{ shared.templates[0].htmlTemplateStart | safe }}' + '{{ component.htmlCode | safe }}' + '{{ shared.templates[0].htmlTemplateEnd | safe }}';
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.write(html_string);
+		document.getElementById('{{ component.id }}_iFramePreview_D').contentWindow.document.close();
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.open('text/htmlreplace');
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.write(html_string);
+		document.getElementById('{{ component.id }}_iFramePreview_M').contentWindow.document.close();
+	</script>
+	{% endif %}
+	{% endfor %}
 </div>
 
 {% for component in shared.components %}

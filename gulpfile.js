@@ -25,8 +25,8 @@ const $ = gulpLoadPlugins()
 gulp.task('assets', () =>
   gulp
     .src([
-      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
-      'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}'
+      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,sketch,psd}',
+      'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,sketch,psd}'
     ])
     .pipe(gulp.dest('dist/assets'))
 )
